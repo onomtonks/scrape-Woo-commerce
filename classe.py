@@ -16,7 +16,7 @@ from selenium.common.exceptions import TimeoutException
 chrome_options=webdriver.ChromeOptions()
 
 
-driver=webdriver.Chrome( executable_path =r'C:\Users\Ansab Waseem\Desktop\haseebproj\chromedriver.exe' )
+driver=webdriver.Chrome( executable_path =r'driver location' )
 wait=WebDriverWait(driver,30)
 url='https://www.modaalabutik.com/en-yeniler?baslangic=0&bitis=900&siralama=&ps=901s'
 #url='https://www.modaalabutik.com/en-yeniler'
