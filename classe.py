@@ -32,32 +32,8 @@ sku=[]
 ima=[]
 si=[]
 count=0
-workbook=openpyxl.load_workbook(r'C:\Users\Ansab Waseem\Documents\classe.xlsx') 
+workbook=openpyxl.load_workbook(r'file location') 
 sheet=workbook.get_sheet_by_name('Sheet1')
-#for dat in soup.findAll("div",{"class":"col-md-4 col-sm-6 col-xs-6 col-6 prodItem"}):
-#	print(dat)
-def clk(self):
-	try:
-		driver.find_element_by_xpath('//*[@id="onesignal-popover-cancel-button"]').click()
-	except:
-		driver.find_element_by_xpath('/html/body/div[7]/div/div/div[2]/div[2]/div[1]/div[7]/div').click()
-def size (self):
-	for siz in driver.find_elements_by_xpath('//*[@id="veri-formu"]/div/div[2]/div[7]/label'):
-		size.append(siz.text) 
-       		
-def title(self):
-	title.append(driver.find_element_by_xpath('//*[@id="veri-formu"]/div/div[2]/div[1]').text)
-def sku(self):
-	sku.append(driver.find_element_by_xpath('//*[@id="tab_1"]/table/tbody/tr[1]/td[2]').text)
-def table(self):
-	for tr in driver.find_elements_by_xpath('//*[@id="tab_1"]/table'):
-		tds = tr.find_elements_by_tag_name('td')
-		print ([td.text for td in tds])
-def images(self):
-	images = driver.find_elements_by_xpath('//*[@id="demo4carousel"]/li/a/img')
-	for image in images:
-		im.append(image.get_attribute('src'))
-
 wait=WebDriverWait(driver,10)
 for dat in soup.findAll("div",{"class":"col-md-4 col-sm-6 col-xs-6 col-6 prodItem"}):
 	size=[]
@@ -102,5 +78,5 @@ for dat in soup.findAll("div",{"class":"col-md-4 col-sm-6 col-xs-6 col-6 prodIte
 	time.sleep(4)
 	
 	
-workbook.save(r'C:\Users\Ansab Waseem\Documents\classe.xlsx')
-#driver.find_element_by_xpath('/html/body/div[6]/a').click()
+workbook.save(r'file location')
+
